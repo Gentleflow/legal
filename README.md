@@ -36,4 +36,4 @@ to the custom domain.
 
 ## Contact
 
-support@gentleflow.app
+gentleflowoverseas@gmail.com
