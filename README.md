@@ -10,6 +10,10 @@ Served via GitHub Pages. Each app gets its own folder; every page is bilingual (
   - Support — https://gentleflow.github.io/legal/ninefold/
   - Privacy Policy — https://gentleflow.github.io/legal/ninefold/privacy/
   - Terms of Use — https://gentleflow.github.io/legal/ninefold/terms/
+- **LifeForest · 人生森林**
+  - Support — https://gentleflow.github.io/legal/lifeforest/
+  - Privacy Policy — https://gentleflow.github.io/legal/lifeforest/privacy/
+  - Terms of Use — https://gentleflow.github.io/legal/lifeforest/terms/
 
 ## Structure
 
