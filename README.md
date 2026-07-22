@@ -6,6 +6,10 @@ Served via GitHub Pages. Each app gets its own folder; every page is bilingual (
 ## Live URLs
 
 - Home — https://gentleflow.github.io/legal/
+- **Sweeple · 益智扫雷**
+  - Support — https://gentleflow.github.io/legal/sweeple/
+  - Privacy Policy — https://gentleflow.github.io/legal/sweeple/privacy/
+  - Terms of Use — https://gentleflow.github.io/legal/sweeple/terms/
 - **Ninefold Sudoku · 九重数独**
   - Support — https://gentleflow.github.io/legal/ninefold/
   - Privacy Policy — https://gentleflow.github.io/legal/ninefold/privacy/
