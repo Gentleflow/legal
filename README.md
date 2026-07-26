@@ -18,6 +18,10 @@ Served via GitHub Pages. Each app gets its own folder; every page is bilingual (
   - Support — https://gentleflow.github.io/legal/lifeforest/
   - Privacy Policy — https://gentleflow.github.io/legal/lifeforest/privacy/
   - Terms of Use — https://gentleflow.github.io/legal/lifeforest/terms/
+- **Locary · 私人地点记忆地图**
+  - Support — https://gentleflow.github.io/legal/locary/
+  - Privacy Policy — https://gentleflow.github.io/legal/locary/privacy/
+  - Terms of Use — https://gentleflow.github.io/legal/locary/terms/
 
 ## Structure
 
