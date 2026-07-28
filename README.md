@@ -8,6 +8,13 @@ Ninefold platform-specific documents:
 - HarmonyOS terms: `/ninefold/harmonyos/terms/`
 - iOS privacy: `/ninefold/privacy/`
 - iOS terms: `/ninefold/terms/`
+
+Sweeple platform-specific documents:
+
+- HarmonyOS privacy: `/sweeple/harmonyos/privacy/`
+- HarmonyOS terms: `/sweeple/harmonyos/terms/`
+- iOS privacy: `/sweeple/privacy/`
+- iOS terms: `/sweeple/terms/`
 Served via GitHub Pages. Each app gets its own folder; every page is bilingual (English / 中文).
 
 ## Live URLs
