@@ -1,6 +1,13 @@
 # Gentleflow · Legal
 
 Public home for the **privacy policies** and **terms of use** of Gentleflow apps.
+
+Ninefold platform-specific documents:
+
+- HarmonyOS privacy: `/ninefold/harmonyos/privacy/`
+- HarmonyOS terms: `/ninefold/harmonyos/terms/`
+- iOS privacy: `/ninefold/privacy/`
+- iOS terms: `/ninefold/terms/`
 Served via GitHub Pages. Each app gets its own folder; every page is bilingual (English / 中文).
 
 ## Live URLs
