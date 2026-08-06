@@ -2,6 +2,12 @@
 
 Public home for the **privacy policies** and **terms of use** of Gentleflow apps.
 
+Arvia iOS documents:
+
+- Support: `/arvia/`
+- Privacy: `/arvia/privacy/`
+- Terms: `/arvia/terms/`
+
 Ninefold platform-specific documents:
 
 - HarmonyOS privacy: `/ninefold/harmonyos/privacy/`
@@ -36,6 +42,10 @@ Served via GitHub Pages. Each app gets its own folder; every page is bilingual (
   - Support — https://gentleflow.github.io/legal/locary/
   - Privacy Policy — https://gentleflow.github.io/legal/locary/privacy/
   - Terms of Use — https://gentleflow.github.io/legal/locary/terms/
+- **Arvia · 箭头路径解谜**
+  - Support — https://gentleflow.github.io/legal/arvia/
+  - Privacy Policy — https://gentleflow.github.io/legal/arvia/privacy/
+  - Terms of Use — https://gentleflow.github.io/legal/arvia/terms/
 
 ## Structure
 
