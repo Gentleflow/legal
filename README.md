@@ -15,6 +15,12 @@ Ninefold platform-specific documents:
 - iOS privacy: `/ninefold/privacy/`
 - iOS terms: `/ninefold/terms/`
 
+YIGE · 一格华容道 HarmonyOS documents:
+
+- Support: `/huarong/`
+- Privacy: `/huarong/harmonyos/privacy/`
+- Terms: `/huarong/harmonyos/terms/`
+
 Sweeple platform-specific documents:
 
 - HarmonyOS privacy: `/sweeple/harmonyos/privacy/`
@@ -34,6 +40,10 @@ Served via GitHub Pages. Each app gets its own folder; every page is bilingual (
   - Support — https://gentleflow.github.io/legal/ninefold/
   - Privacy Policy — https://gentleflow.github.io/legal/ninefold/privacy/
   - Terms of Use — https://gentleflow.github.io/legal/ninefold/terms/
+- **YIGE · 一格华容道**
+  - Support — https://gentleflow.github.io/legal/huarong/
+  - HarmonyOS Privacy Policy — https://gentleflow.github.io/legal/huarong/harmonyos/privacy/
+  - HarmonyOS Terms of Use — https://gentleflow.github.io/legal/huarong/harmonyos/terms/
 - **LifeForest · 人生森林**
   - Support — https://gentleflow.github.io/legal/lifeforest/
   - Privacy Policy — https://gentleflow.github.io/legal/lifeforest/privacy/
