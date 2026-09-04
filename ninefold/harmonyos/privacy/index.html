@@ -23,7 +23,7 @@
 
   <section data-lang="zh" class="show">
     <h1>隐私政策（HarmonyOS 版）</h1>
-    <p class="sub">九重数独 · 生效及更新日期：2026 年 7 月 28 日</p>
+    <p class="sub">九重数独 · 生效及更新日期：2026 年 9 月 4 日</p>
 
     <div class="tldr">
       <strong>摘要：</strong>九重数独 HarmonyOS 版是单机游戏，无需注册账号，不接入广告、分析或第三方追踪 SDK，
@@ -44,27 +44,36 @@
 
       <h2>3. 本应用如何处理数据</h2>
       <p><strong>我们目前不通过本应用收集或向开发者服务器传输可识别你的个人信息。</strong>
-      本应用不要求姓名、手机号码、电子邮箱、华为账号或其他注册资料，也不读取设备标识符、通讯录、相册、
+      本应用不要求姓名、手机号码、电子邮箱或其他注册资料，也不读取设备标识符、通讯录、相册、
       精确位置、剪贴板、相机或麦克风。</p>
+      <p>当你购买会员时，交易由华为应用市场的应用内支付服务（IAP Kit）使用你在设备上已登录的华为账号完成。
+      华为会依据其自身政策处理完成交易和订阅管理所需的账号、订单与支付信息；本应用不获取你的华为账号资料，
+      也不接触你的银行卡号、支付密码等支付要素。</p>
       <p>为实现单机游戏功能，本应用会在你的设备本地处理以下功能数据：</p>
       <ul>
         <li><strong>游戏进度与统计：</strong>已完成关卡、最佳用时、完成次数、地狱模式进度、提示使用情况、游玩日期和脑力档案；用于保存进度、展示统计和继续游戏。</li>
         <li><strong>进行中的游戏：</strong>题盘、已填数字、笔记、计时和错误次数；用于恢复未完成的对局。</li>
         <li><strong>应用偏好：</strong>主题、声音、音乐、振动及辅助显示开关；用于按照你的选择提供功能。</li>
         <li><strong>同意记录：</strong>已同意的政策版本；用于避免每次启动重复询问。该记录仅保存在本机。</li>
+        <li><strong>会员与购买状态：</strong>你所购买的会员方案、购买凭据的校验结果和会员有效期状态；用于在本机开启会员功能并恢复已购项目。</li>
       </ul>
       <p>上述功能数据通常不能单独识别你的身份，仅在应用的私有存储中使用，不会由本应用上传给我们。</p>
 
       <h2>4. 设备权限与系统能力</h2>
       <ul>
         <li><strong>振动权限（ohos.permission.VIBRATE）：</strong>用于按你的设置提供按键和游戏结果触感反馈。你可在应用“设置”中关闭振动。</li>
-        <li><strong>网络权限：</strong>本应用不声明网络访问权限。点击隐私政策、用户协议或联系我们时，
-        本应用会请求 HarmonyOS 交由系统浏览器或邮件应用打开相应地址；后续网络访问由你选择的系统应用完成。</li>
+        <li><strong>网络权限（ohos.permission.INTERNET）：</strong>用于华为应用内支付（IAP Kit）查询商品与价格、
+        发起支付、校验购买凭据和管理订阅。本应用不会通过网络向开发者服务器上传你的游戏数据或个人信息。
+        点击隐私政策、用户协议或联系我们时，本应用会请求 HarmonyOS 交由系统浏览器或邮件应用打开相应地址；
+        后续网络访问由你选择的系统应用完成。</li>
       </ul>
 
       <h2>5. 第三方 SDK、共享与对外提供</h2>
-      <p>本应用目前不集成广告 SDK、统计分析 SDK、崩溃上报 SDK、支付 SDK或其他会向第三方传输个人信息的 SDK；
-      不出售、出租、交换、共享或公开披露你的个人信息，也不进行跨应用追踪或个性化广告。</p>
+      <p>本应用集成华为应用内支付服务（IAP Kit，由华为软件技术有限公司提供），用于会员订阅、一次性购买、
+      恢复购买与订阅管理。调用时会向华为传输完成交易所必需的信息（如商品标识、订单与购买凭据，以及你已登录的华为账号），
+      具体处理规则适用华为的隐私声明。除此之外，本应用不集成广告 SDK、统计分析 SDK、崩溃上报 SDK
+      或其他会向第三方传输个人信息的 SDK；不出售、出租、交换、共享或公开披露你的个人信息，
+      也不进行跨应用追踪或个性化广告。</p>
       <p>本应用调用 HarmonyOS 提供的应用存储、振动、备份恢复和外部链接等系统能力。华为及设备系统运营方可能依据你的
       设备设置和其自身政策处理应用分发、系统安全、备份恢复或故障诊断所需的信息；该等平台处理不由本应用控制。
       你可在设备设置及华为相关服务中管理这些选项。</p>
@@ -108,7 +117,7 @@
 
   <section data-lang="en">
     <h1>Privacy Policy (HarmonyOS)</h1>
-    <p class="sub">Ninefold Sudoku · Effective and last updated July 28, 2026</p>
+    <p class="sub">Ninefold Sudoku · Effective and last updated September 4, 2026</p>
 
     <div class="tldr">
       <strong>Summary:</strong> The HarmonyOS edition is an offline game. It requires no account,
@@ -132,10 +141,15 @@
 
       <h2>3. Data handled by the App</h2>
       <p><strong>The App does not currently collect identifiable personal information or transmit
-      it to a developer server.</strong> No name, phone number, email, Huawei Account, device
-      identifier, contacts, photos, precise location, clipboard, camera, or microphone data is requested.</p>
-      <p>The App locally stores game progress and statistics, unfinished puzzles, preferences, and
-      the accepted-policy version. This information is used only to save games, show statistics,
+      it to a developer server.</strong> No name, phone number, email, device identifier, contacts,
+      photos, precise location, clipboard, camera, or microphone data is requested.</p>
+      <p>When you buy Premium, the transaction is completed by AppGallery in-app purchase (IAP Kit)
+      using the HUAWEI ID already signed in on your device. Huawei processes the account, order, and
+      payment information needed to complete the purchase and manage the subscription under its own
+      policy. The App does not receive your HUAWEI ID profile and never handles your card number or
+      payment credentials.</p>
+      <p>The App locally stores game progress and statistics, unfinished puzzles, preferences, the
+      accepted-policy version, and your Premium plan and entitlement status. This information is used only to save games, show statistics,
       restore play, apply your settings, and remember your privacy choice. It remains in the App's
       private on-device storage and is not uploaded by the App.</p>
 
@@ -143,14 +157,21 @@
       <ul>
         <li><strong>Vibration:</strong> <code>ohos.permission.VIBRATE</code> provides haptic feedback
         according to your in-App setting.</li>
-        <li><strong>Network:</strong> the App declares no Internet permission. Legal and contact
-        links are handed to your system browser or mail app, which handles any later connection.</li>
+        <li><strong>Network:</strong> <code>ohos.permission.INTERNET</code> is used by AppGallery
+        in-app purchase (IAP Kit) to load products and prices, start payment, verify purchases, and
+        manage subscriptions. The App uploads no game data or personal information to a developer
+        server. Legal and contact links are handed to your system browser or mail app, which handles
+        any later connection.</li>
       </ul>
 
       <h2>5. SDKs and disclosure</h2>
-      <p>The App contains no advertising, analytics, crash-reporting, payment, or other third-party
-      SDK that transmits personal information. We do not sell, rent, share, publicly disclose, or
-      use personal information for cross-app tracking or personalized advertising.</p>
+      <p>The App integrates AppGallery in-app purchase (IAP Kit, provided by Huawei) for Premium
+      subscriptions, one-time purchase, restore, and subscription management. Using it transmits the
+      information required to complete a transaction, such as product identifiers, orders, purchase
+      tokens, and the signed-in HUAWEI ID; Huawei's own privacy statement governs that processing.
+      Apart from that, the App contains no advertising, analytics, crash-reporting, or other
+      third-party SDK that transmits personal information. We do not sell, rent, share, publicly
+      disclose, or use personal information for cross-app tracking or personalized advertising.</p>
       <p>The App uses HarmonyOS system storage, vibration, backup/restore, and external-link
       capabilities. Huawei or the device system operator may process information needed for
       distribution, security, backup, or diagnostics under your settings and their own policies.
