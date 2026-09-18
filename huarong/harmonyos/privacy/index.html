@@ -23,11 +23,13 @@
 
   <section data-lang="zh" class="show">
     <h1>隐私政策（HarmonyOS 版）</h1>
-    <p class="sub">一格华容道 · 生效及更新日期：2026 年 9 月 17 日</p>
+    <p class="sub">一格华容道 · 生效及更新日期：2026 年 9 月 18 日</p>
 
     <div class="tldr">
       <strong>摘要：</strong>一格华容道 HarmonyOS 版是单机游戏，游玩无需注册账号；可选购买和订阅由华为应用市场处理。不接入广告、分析或第三方追踪 SDK，
       不向 Gentleflow 服务器上传个人信息。游戏进度和偏好仅保存在应用本机私有存储中。
+      自 1.2.0 起，“设置”中新增“群星计划”应用互推入口：只有在你主动点开它之后，本应用才会连接群星计划服务器获取推荐列表，
+      并发送一个仅存于本机、与你身份无关的随机标识用于展示与点击统计。不打开该入口就不会发生任何联网。
     </div>
 
     <div class="card">
@@ -42,7 +44,9 @@
       包名为 <code>tech.gentleflow.huarong</code>。其他平台或其他应用不适用本政策。</p>
 
       <h2>3. 本应用如何处理数据</h2>
-      <p><strong>我们目前不通过本应用收集或向开发者服务器传输可识别你的个人信息。</strong>
+      <p><strong>我们不通过本应用收集或向 Gentleflow 服务器传输可识别你的个人信息。</strong>
+      本应用唯一的联网功能是“群星计划”应用互推（见第 5 节），它只在你主动点开该入口后才会发起请求，
+      发送的内容不包含可识别你的个人信息。
       游玩不要求注册本应用账号。购买、恢复权益或管理订阅时，华为应用市场可能要求登录华为账号；本应用不会取得你的账号密码或支付凭据，也不读取设备标识符、通讯录、相册、
       精确位置、剪贴板、相机或麦克风。</p>
       <p>为实现单机游戏功能，本应用会在你的设备本地处理以下功能数据：</p>
@@ -53,16 +57,28 @@
         <li><strong>购买与会员状态：</strong>为核验和恢复权益，本应用通过华为 IAP Kit 查询商品、订单和订阅状态，在设备上验证签名及应用归属；本地保存商品标识、购买时间、到期时间、核验时间和会员状态。订单令牌用于向华为确认交付，不上传至 Gentleflow 服务器。</li>
         <li><strong>同意记录：</strong>已同意的政策版本；用于避免每次启动重复询问。该记录仅保存在本机。</li>
       </ul>
-      <p>上述功能数据通常不能单独识别你的身份，仅在应用的私有存储中使用，不会由本应用上传给我们。</p>
+      <p>上述功能数据通常不能单独识别你的身份，仅在应用的私有存储中使用，不会由本应用上传给我们，也不会发送给群星计划。</p>
 
       <h2>4. 设备权限与系统能力</h2>
       <ul>
         <li><strong>振动权限（ohos.permission.VIBRATE）：</strong>用于按你的设置提供按键和游戏结果触感反馈。你可在应用“设置”中关闭振动。</li>
-        <li><strong>网络权限：</strong>本应用不声明网络访问权限。点击隐私政策、用户协议或联系我们时，
-        本应用会请求 HarmonyOS 交由系统浏览器或邮件应用打开相应地址；后续网络访问由你选择的系统应用完成。</li>
+        <li><strong>网络权限（ohos.permission.INTERNET、ohos.permission.GET_NETWORK_INFO）：</strong>
+        仅用于第 5 节所述的“群星计划”应用互推：在你点开该入口后获取推荐应用列表、图标和详情，并上报展示与点击统计。
+        游戏本体（关卡、每日挑战、炼狱、统计与设置）完全离线，不联网也可正常游玩。
+        点击隐私政策、用户协议或联系我们时，本应用会请求 HarmonyOS 交由系统浏览器或邮件应用打开相应地址；
+        后续网络访问由你选择的系统应用完成。</li>
       </ul>
 
       <h2>5. 第三方 SDK、共享与对外提供</h2>
+      <p><strong>群星计划（应用互推）：</strong>“设置”中的“群星计划”是独立开发者之间的等权交叉推广，
+      用于向你展示其他鸿蒙应用，本应用也会出现在其他参与者的列表中。它不是广告 SDK：本应用未集成其代码，
+      不展示横幅、插屏或信息流广告，也不做个性化投放或跨应用追踪。相关请求由本应用直接向
+      <code>appunion.chiyoushu.com</code> 发起，<strong>且仅在你主动点开该入口之后发生</strong>；进入“设置”页本身不会产生任何网络请求。
+      发送的内容只有三项：一个由本应用在你的设备上随机生成并仅保存在本机的标识（UUID，用于统计去重，
+      不是设备标识符，不与你的账号、手机号或华为账号关联，清除应用数据或卸载即失效）、平台标识
+      <code>harmonyos</code>，以及被展示或被点击的那个应用的编号。我们不会发送你的游戏进度、统计、
+      购买记录、设备标识符或任何可识别你的信息。该服务由其运营方按其自身规则处理上述信息。
+      若你不点开“群星计划”，本应用不会因此功能连接网络。</p>
       <p>本应用不集成广告、统计分析或崩溃上报 SDK。可选购买使用 HarmonyOS 系统 IAP Kit，由华为应用市场处理账号、订单、支付和续费；华为依据其支付界面及隐私政策处理相关信息。我们不会取得你的银行卡资料或账号密码；
       不出售、出租、交换、共享或公开披露你的个人信息，也不进行跨应用追踪或个性化广告。</p>
       <p>本应用调用 HarmonyOS 提供的应用存储、振动、备份恢复和外部链接等系统能力。华为及设备系统运营方可能依据你的
@@ -81,6 +97,7 @@
         <li>在“设置 › 数据 › 重置进度”删除关卡进度、统计、脑力档案及地狱模式记录。</li>
         <li>在“设置 › 数据 › 撤回隐私同意”撤回同意；应用会退出，下次启动时再次征求你的选择。撤回不影响此前处理的合法性，也不会自动删除本机游戏数据。</li>
         <li>通过系统清除应用数据或卸载本应用，删除应用私有目录中的全部本机数据。</li>
+        <li>不使用“群星计划”即可避免本应用的全部联网行为；清除应用数据或卸载会一并清除该功能使用的本机随机标识。</li>
         <li>通过上方邮箱提出查阅、复制、更正、删除、解释说明或投诉请求。由于本应用不向我们上传数据，
         我们通常没有可按你的身份检索的服务器端记录，但会说明核查结果并协助你使用本机或系统功能。</li>
       </ul>
@@ -90,7 +107,8 @@
       指导下阅读本政策和使用本应用；如未来功能需要处理儿童个人信息，我们会在处理前另行告知并依法取得监护人同意。</p>
 
       <h2>9. 数据出境</h2>
-      <p>本应用不将个人信息上传至 Gentleflow 服务器，因此不存在由本应用发起的个人信息出境。
+      <p>本应用不将个人信息上传至 Gentleflow 服务器。第 5 节所述的“群星计划”请求不包含可识别你的个人信息，
+      仅包含本机随机标识、平台标识和被展示应用的编号。
       通过系统浏览器访问本页面时，GitHub Pages 可能依据其服务规则处理网络连接所必需的信息；
       该访问发生在系统浏览器中，你也可以在首次同意后离线使用主要游戏功能。</p>
 
@@ -108,13 +126,17 @@
 
   <section data-lang="en">
     <h1>Privacy Policy (HarmonyOS)</h1>
-    <p class="sub">YIGE Sliding Puzzle · Effective and last updated September 17, 2026</p>
+    <p class="sub">YIGE Sliding Puzzle · Effective and last updated September 18, 2026</p>
 
     <div class="tldr">
       <strong>Summary:</strong> The HarmonyOS edition is an offline game. Play requires no app registration; optional purchases use AppGallery and a HUAWEI ID. It
       includes no advertising, analytics, or third-party tracking SDK, and uploads no personal
       information to a Gentleflow server. Progress and preferences remain in the App's private
-      on-device storage.
+      on-device storage. Since 1.2.0, Settings includes an "App Union" cross-promotion entry:
+      only after you open it does the App contact the App Union server for the recommendation
+      list, sending a random identifier that is stored on your device only and is unrelated to
+      your identity, used for impression and click counting. If you never open it, the App makes
+      no network connection.
     </div>
 
     <div class="card">
@@ -130,8 +152,10 @@
       <code>tech.gentleflow.huarong</code>. It does not apply to other platforms or apps.</p>
 
       <h2>3. Data handled by the App</h2>
-      <p><strong>The App does not currently collect identifiable personal information or transmit
-      it to a developer server.</strong> Play requires no app registration. AppGallery may require a HUAWEI ID for purchases, restoration, or subscription management. We do not receive account passwords or payment credentials, or read device identifiers, contacts, photos, precise location, clipboard, camera, or microphone data.</p>
+      <p><strong>The App does not collect identifiable personal information or transmit it to a
+      Gentleflow server.</strong> The App's only networking feature is the "App Union"
+      cross-promotion described in section 5; it sends requests only after you open that entry,
+      and what it sends contains no information that identifies you. Play requires no app registration. AppGallery may require a HUAWEI ID for purchases, restoration, or subscription management. We do not receive account passwords or payment credentials, or read device identifiers, contacts, photos, precise location, clipboard, camera, or microphone data.</p>
       <p>The App locally stores game progress and statistics, unfinished puzzles, preferences, and
       the accepted-policy version. This information is used only to save games, show statistics,
       restore play, apply your settings, and remember your privacy choice. It remains in the App's
@@ -142,11 +166,30 @@
       <ul>
         <li><strong>Vibration:</strong> <code>ohos.permission.VIBRATE</code> provides haptic feedback
         according to your in-App setting.</li>
-        <li><strong>Network:</strong> the App declares no Internet permission. Legal and contact
-        links are handed to your system browser or mail app, which handles any later connection.</li>
+        <li><strong>Network (<code>ohos.permission.INTERNET</code>,
+        <code>ohos.permission.GET_NETWORK_INFO</code>):</strong> used solely for the "App Union"
+        cross-promotion in section 5 — fetching the recommendation list, icons and details after
+        you open that entry, and reporting impressions and clicks. The game itself (levels, daily
+        challenge, inferno, statistics and settings) is fully offline and plays without a network.
+        Legal and contact links are handed to your system browser or mail app, which handles any
+        later connection.</li>
       </ul>
 
       <h2>5. SDKs and disclosure</h2>
+      <p><strong>App Union (cross-promotion):</strong> the "App Union" entry in Settings is an
+      equal-footing cross-promotion among independent developers: it shows you other HarmonyOS
+      apps, and this App likewise appears in other participants' lists. It is not an advertising
+      SDK — no third-party code is embedded, no banner, interstitial or feed ads are shown, and
+      there is no personalized targeting or cross-app tracking. Requests go directly from the App
+      to <code>appunion.chiyoushu.com</code>, and <strong>only after you open that entry</strong>;
+      opening the Settings page itself triggers no network request. Only three things are sent: a
+      random identifier generated by the App on your device and stored only there (a UUID used to
+      de-duplicate counting — not a device identifier, not linked to your account, phone number or
+      HUAWEI ID, and void once App data is cleared or the App is uninstalled), the platform tag
+      <code>harmonyos</code>, and the ID of the app being shown or tapped. We do not send your
+      progress, statistics, purchases, device identifiers, or anything that identifies you. That
+      service processes the above under its own operator's rules. If you do not open "App Union",
+      the App makes no network connection for this feature.</p>
       <p>The App contains no advertising, analytics, or crash-reporting SDK. Optional purchases use the system IAP Kit: AppGallery handles accounts, orders, payment, and renewals under the notices and privacy policies shown by Huawei. We do not receive your bank details or account password, sell personal data, or use it for cross-app tracking or personalized advertising.</p>
       <p>The App uses HarmonyOS system storage, vibration, backup/restore, and external-link
       capabilities. Huawei or the device system operator may process information needed for
@@ -165,6 +208,8 @@
         <li>Use Settings › Data › Withdraw privacy consent. The App closes and asks again at the
         next launch; withdrawal does not automatically delete local game data.</li>
         <li>Clear App data or uninstall to remove the App's private on-device data.</li>
+        <li>Not using "App Union" avoids all networking by the App; clearing App data or
+        uninstalling also clears the local random identifier it uses.</li>
         <li>Email us to request access, correction, deletion, explanation, or to complain. Because
         no data is uploaded, we normally hold no server record that can be retrieved by identity.</li>
       </ul>
@@ -175,7 +220,9 @@
       obtain legally required guardian consent before any future processing of children's data.</p>
 
       <h2>9. International transfers</h2>
-      <p>The App initiates no transfer of personal information to a Gentleflow server. If you open
+      <p>The App uploads no personal information to a Gentleflow server. The "App Union" requests
+      described in section 5 contain no information that identifies you — only a local random
+      identifier, the platform tag, and the ID of the app being shown. If you open
       this page in a browser, GitHub Pages may process connection data under its own terms. The
       principal game can be used offline after the first consent.</p>
 
