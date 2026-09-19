@@ -23,11 +23,12 @@
 
   <section data-lang="zh" class="show">
     <h1>隐私政策（HarmonyOS 版）</h1>
-    <p class="sub">九重数独 · 生效及更新日期：2026 年 9 月 4 日</p>
+    <p class="sub">九重数独 · 生效及更新日期：2026 年 9 月 19 日</p>
 
     <div class="tldr">
       <strong>摘要：</strong>九重数独 HarmonyOS 版是单机游戏，无需注册账号，不接入广告、分析或第三方追踪 SDK，
       不向 Gentleflow 服务器上传个人信息。游戏进度和偏好仅保存在应用本机私有存储中。
+      自 1.8.0 起，主动打开“群星计划”后会向推荐服务发送本机随机标识及应用展示、点击信息，详见第 5 节。
     </div>
 
     <div class="card">
@@ -63,16 +64,27 @@
       <ul>
         <li><strong>振动权限（ohos.permission.VIBRATE）：</strong>用于按你的设置提供按键和游戏结果触感反馈。你可在应用“设置”中关闭振动。</li>
         <li><strong>网络权限（ohos.permission.INTERNET）：</strong>用于华为应用内支付（IAP Kit）查询商品与价格、
-        发起支付、校验购买凭据和管理订阅。本应用不会通过网络向开发者服务器上传你的游戏数据或个人信息。
+        发起支付、校验购买凭据和管理订阅；也用于在你主动打开群星计划后获取推荐、图标和详情，并上报展示与点击。本应用不会通过网络向开发者服务器上传你的游戏数据或个人信息。
         点击隐私政策、用户协议或联系我们时，本应用会请求 HarmonyOS 交由系统浏览器或邮件应用打开相应地址；
         后续网络访问由你选择的系统应用完成。</li>
       </ul>
 
+      <p>网络状态权限（ohos.permission.GET_NETWORK_INFO）支持推荐服务及应用市场相关网络能力，无需运行时授权弹窗。</p>
+
       <h2>5. 第三方 SDK、共享与对外提供</h2>
+      <p><strong>群星计划（AppUnions）：</strong>设置中的可选应用互推功能直接连接
+      <a href="https://appunion.chiyoushu.com">群星计划服务（appunion.chiyoushu.com）</a>，
+      用于展示其他独立开发者的鸿蒙应用。只有主动点开入口后才发起该功能的请求；不点开即可避免此功能的数据传输。
+      推荐、详情请求包含本应用编号及平台标识 harmonyos；展示或点击时还会发送被推荐应用编号、
+      本机随机生成并持久保存的 client_id（UUID）和每次事件的随机去重编号；展示事件另含可见状态。
+      client_id 不是设备标识符，不与账号或游戏进度关联，清除应用数据或卸载会删除本机标识。
+      网络连接会使服务方接收到 IP 地址等必要连接信息。服务方按其自身规则处理收到的数据。
+      不发送游戏进度、购买记录、设备标识符或华为账号，不做个性化广告或跨应用追踪。
+      本应用未集成群星计划 SDK，未展示横幅或插屏广告。点击下载后由系统打开应用市场或目标网站。</p>
       <p>本应用集成华为应用内支付服务（IAP Kit，由华为软件技术有限公司提供），用于会员订阅、一次性购买、
       恢复购买与订阅管理。调用时会向华为传输完成交易所必需的信息（如商品标识、订单与购买凭据，以及你已登录的华为账号），
       具体处理规则适用华为的隐私声明。除此之外，本应用不集成广告 SDK、统计分析 SDK、崩溃上报 SDK
-      或其他会向第三方传输个人信息的 SDK；不出售、出租、交换、共享或公开披露你的个人信息，
+      或其他会向第三方传输个人信息的 SDK；除上述由你主动使用功能所需的数据传输外，不出售、出租、交换或公开披露你的个人信息，
       也不进行跨应用追踪或个性化广告。</p>
       <p>本应用调用 HarmonyOS 提供的应用存储、振动、备份恢复和外部链接等系统能力。华为及设备系统运营方可能依据你的
       设备设置和其自身政策处理应用分发、系统安全、备份恢复或故障诊断所需的信息；该等平台处理不由本应用控制。
@@ -99,7 +111,7 @@
       指导下阅读本政策和使用本应用；如未来功能需要处理儿童个人信息，我们会在处理前另行告知并依法取得监护人同意。</p>
 
       <h2>9. 数据出境</h2>
-      <p>本应用不将个人信息上传至 Gentleflow 服务器，因此不存在由本应用发起的个人信息出境。
+      <p>本应用不将个人信息上传至 Gentleflow 服务器。群星计划收到的数据及其处理规则见第 5 节；我们不对第三方服务的存储地点作未经核实的承诺。
       通过系统浏览器访问本页面时，GitHub Pages 可能依据其服务规则处理网络连接所必需的信息；
       该访问发生在系统浏览器中，你也可以在首次同意后离线使用主要游戏功能。</p>
 
@@ -117,13 +129,13 @@
 
   <section data-lang="en">
     <h1>Privacy Policy (HarmonyOS)</h1>
-    <p class="sub">Ninefold Sudoku · Effective and last updated September 4, 2026</p>
+    <p class="sub">Ninefold Sudoku · Effective and last updated September 19, 2026</p>
 
     <div class="tldr">
       <strong>Summary:</strong> The HarmonyOS edition is an offline game. It requires no account,
       includes no advertising, analytics, or third-party tracking SDK, and uploads no personal
       information to a Gentleflow server. Progress and preferences remain in the App's private
-      on-device storage.
+      on-device storage. From version 1.8.0, opening AppUnions sends a locally generated random identifier and app impression/click information to the recommendation service, as described in section 5.
     </div>
 
     <div class="card">
@@ -159,19 +171,29 @@
         according to your in-App setting.</li>
         <li><strong>Network:</strong> <code>ohos.permission.INTERNET</code> is used by AppGallery
         in-app purchase (IAP Kit) to load products and prices, start payment, verify purchases, and
-        manage subscriptions. The App uploads no game data or personal information to a developer
+        manage subscriptions. It also loads AppUnions recommendations, icons and details and reports impressions and clicks after you open the feature. The App uploads no game data or personal information to a developer
         server. Legal and contact links are handed to your system browser or mail app, which handles
         any later connection.</li>
       </ul>
 
+      <p>Network state permission (ohos.permission.GET_NETWORK_INFO) supports network capabilities used by recommendations and AppGallery and requires no runtime permission prompt.</p>
+
       <h2>5. SDKs and disclosure</h2>
+      <p><strong>AppUnions:</strong> This optional feature connects directly to
+      <a href="https://appunion.chiyoushu.com">AppUnions (appunion.chiyoushu.com)</a> to recommend other independent HarmonyOS apps.
+      Requests for this feature start only after you open its entry in Settings. Recommendation and detail requests include this App's ID and the harmonyos platform.
+      Impressions and clicks additionally send the recommended app's ID, a locally generated and persisted random client_id (UUID),
+      and a random event identifier for deduplication; impressions include visibility status. The client_id is not a device identifier and is not linked to your account or game progress.
+      Clearing App data or uninstalling removes the local identifier. The service also receives connection information such as your IP address and handles received data under its own rules.
+      No game progress, purchase records, device identifier, or HUAWEI ID is sent. There is no personalized advertising or cross-app tracking.
+      No AppUnions SDK, banner, or interstitial is integrated. Download buttons open the system store or destination website.
+      You can avoid this feature's transmissions by not opening it.</p>
       <p>The App integrates AppGallery in-app purchase (IAP Kit, provided by Huawei) for Premium
       subscriptions, one-time purchase, restore, and subscription management. Using it transmits the
       information required to complete a transaction, such as product identifiers, orders, purchase
       tokens, and the signed-in HUAWEI ID; Huawei's own privacy statement governs that processing.
       Apart from that, the App contains no advertising, analytics, crash-reporting, or other
-      third-party SDK that transmits personal information. We do not sell, rent, share, publicly
-      disclose, or use personal information for cross-app tracking or personalized advertising.</p>
+      third-party SDK that transmits personal information. Apart from the optional feature transmissions described above, we do not sell, rent, publicly disclose, or use personal information for cross-app tracking or personalized advertising.</p>
       <p>The App uses HarmonyOS system storage, vibration, backup/restore, and external-link
       capabilities. Huawei or the device system operator may process information needed for
       distribution, security, backup, or diagnostics under your settings and their own policies.
