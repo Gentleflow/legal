@@ -2,6 +2,17 @@
 
 Public home for the **privacy policies** and **terms of use** of Gentleflow apps.
 
+Kudoku Android documents (九重杀手数独):
+
+- Support: `/kudoku/android/`
+- Privacy: `/kudoku/android/privacy/`
+- Terms: `/kudoku/android/terms/`
+
+These Android-specific pages describe local progress storage, Google Play billing,
+RevenueCat purchase validation/reporting, and optional local reminders. Their
+source is maintained in Kudoku-Android's `store/legal/documents.json` and generated
+by `tools/legal/build.py`; iOS documents are separate.
+
 Arvia iOS documents:
 
 - Support: `/arvia/`
