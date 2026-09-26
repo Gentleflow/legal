@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Jigu Japanese</title>
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="../../style.css">
+<noscript><style>[data-lang]{display:block!important}</style></noscript>
+</head>
+<body>
+<header class="site">
+  <a class="mark" href="../../">J</a>
+  <div class="brand">Gentleflow<small>Legal · Jigu 叽咕日语</small></div>
+</header>
+
+<div class="wrap">
+  <div class="langbar">
+    <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+    <button id="btn-zh" onclick="setLang('zh')">中文</button>
+  </div>
+
+<section data-lang="en" class="show"><h1>Privacy Policy</h1><p class="sub">Jigu Japanese · Effective September 26, 2026</p><div class="card">
+<h2>About Jigu</h2><p>Jigu Japanese (叽咕日语) is a Japanese learning app developed by Gentleflow. No app account is required. Contact <a href="mailto:support@gentleflow.tech">support@gentleflow.tech</a> with privacy questions.</p>
+<h2>Learning data and permissions</h2><p>Your learning profile, lesson progress, review schedule, streaks and preferences are stored in the app's private storage on your device. Lesson audio and illustrations are bundled with the app. The app does not upload voice recordings or require microphone access. Optional study reminders use local notifications with your permission.</p>
+<h2>Purchases</h2><p>Apple processes payments. We do not receive your Apple account password or payment card details. RevenueCat verifies purchases, restores purchases and manages membership access on our behalf. It receives an app-user identifier, transaction and subscription information, and related device, system and storefront information needed for those services. See <a href="https://www.revenuecat.com/privacy">RevenueCat's Privacy Policy</a> and <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. This information may be processed outside your country.</p>
+<h2>Advertising and diagnostics</h2><p>Jigu does not use advertising identifiers, show ads or track your activity across other apps and websites. Apple may provide crash and performance information according to your device's sharing settings. If you contact support, we receive the information you choose to send, including app and system version details included in the feedback email.</p>
+<h2>Retention and your choices</h2><p>You can reset learning data in the app or delete the app to remove local app data. You can turn off notifications in iOS Settings. Deleting the app does not cancel a subscription; manage subscriptions in your Apple account settings. Apple and RevenueCat retain purchase records under their policies and applicable requirements. Contact us to request access, correction or deletion of information we control; some records may need to be retained for transaction, fraud-prevention or legal purposes.</p>
+<h2>Children and updates</h2><p>We do not ask learners for personal contact information. A parent or guardian should supervise purchases by children. Please contact us if a child has provided personal information through support. We may update this policy and will show the effective date on this page.</p></div></section><section data-lang="zh"><h1>隐私政策</h1><p class="sub">叽咕日语 · 2026 年 9 月 26 日生效</p><div class="card">
+<h2>关于叽咕</h2><p>叽咕日语由 Gentleflow 开发，无需注册应用账号。隐私问题请联系 <a href="mailto:support@gentleflow.tech">support@gentleflow.tech</a>。</p>
+<h2>学习数据和权限</h2><p>学习偏好、课程进度、复习计划、连续学习记录和设置保存在设备的应用私有存储中。课程录音和插图随应用提供。本应用不上传语音录音，不要求麦克风权限。学习提醒经你授权后通过本地通知发送。</p>
+<h2>购买服务</h2><p>付款由 Apple 处理，我们不会收到 Apple 账号密码或银行卡资料。RevenueCat 代表我们校验交易、恢复购买和管理会员权限，会处理应用用户标识、交易和订阅信息，以及服务所需的设备、系统、商店地区等信息。详见 <a href="https://www.revenuecat.com/privacy">RevenueCat 隐私政策</a>和 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。服务商可能在你所在国家或地区以外处理这些信息。</p>
+<h2>广告与诊断</h2><p>叽咕不使用广告标识符，不展示广告，不跨应用或网站追踪。Apple 可能根据设备共享设置提供崩溃和性能信息。联系支持时，我们会收到你主动发送的内容，包括反馈邮件中的应用版本和系统版本。</p>
+<h2>保存和你的选择</h2><p>你可以在应用内重置学习记录，或删除应用以移除本地应用数据；可在 iOS 设置中关闭通知。删除应用不会取消订阅，请在 Apple 账号订阅设置中管理。Apple 和 RevenueCat 按其政策和适用要求保存购买记录。你可联系我们申请访问、更正或删除由我们控制的信息；交易、防欺诈或法律要求可能需要保留部分记录。</p>
+<h2>儿童与政策更新</h2><p>我们不会要求学习者提供个人联系方式。儿童购买应由家长或监护人监督。如果儿童通过支持渠道提供了个人信息，请联系我们。本政策更新时会标明生效日期。</p></div></section></div><footer class="site">
+  <span>© 2026 Gentleflow</span>
+  <a href="../../">Legal home</a>
+  <a href="../">Jigu support</a>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('[data-lang]').forEach(function(s){ s.classList.toggle('show', s.getAttribute('data-lang')===l); });
+  document.getElementById('btn-en').classList.toggle('active', l==='en');
+  document.getElementById('btn-zh').classList.toggle('active', l==='zh');
+  document.documentElement.lang = l==='zh' ? 'zh-Hans' : 'en';
+  try{ history.replaceState(null,'', l==='zh'?'#zh':'#en'); }catch(e){}
+}
+if (location.hash === '#zh' || (!location.hash && (navigator.language||'').toLowerCase().indexOf('zh')===0)) setLang('zh');
+</script>
+</body>
+</html>

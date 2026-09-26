@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Use · Jigu Japanese</title>
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="../../style.css">
+<noscript><style>[data-lang]{display:block!important}</style></noscript>
+</head>
+<body>
+<header class="site">
+  <a class="mark" href="../../">J</a>
+  <div class="brand">Gentleflow<small>Legal · Jigu 叽咕日语</small></div>
+</header>
+
+<div class="wrap">
+  <div class="langbar">
+    <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+    <button id="btn-zh" onclick="setLang('zh')">中文</button>
+  </div>
+
+<section data-lang="en" class="show"><h1>Terms of Use</h1><p class="sub">Jigu Japanese · Effective September 26, 2026</p><div class="card">
+<h2>Use of the app</h2><p>By using Jigu Japanese, you agree to these terms and the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a>. The EULA governs the app license. Jigu is licensed for your personal learning use. You may not unlawfully redistribute the app or its learning assets. Learning content is educational and does not guarantee a particular proficiency or examination result.</p>
+<h2>Jigu Pro</h2><p>Membership provides access to the app's premium learning content and features described on the paywall. Available plans are monthly and yearly auto-renewable subscriptions and a lifetime non-consumable purchase. Lifetime is a one-time purchase without automatic renewal. Prices and billing periods are shown in your local currency before purchase and confirmed by Apple.</p>
+<h2>Free trials and renewal</h2><p>Eligible new subscribers may receive a 3-day monthly-plan trial or a 7-day yearly-plan trial. Eligibility is determined by Apple; prior subscribers may not qualify. The app only advertises a trial when eligibility is confirmed. After a trial, the selected subscription renews at the displayed price unless cancelled. Payment is charged to your Apple account. Subscriptions renew automatically unless cancelled at least 24 hours before the current period ends; renewal charges may occur within the final 24 hours. Any unused portion of a trial may be forfeited when purchasing a subscription, where applicable.</p>
+<h2>Manage, restore and refunds</h2><p>Manage or cancel subscriptions in iOS Settings → your Apple account → Subscriptions. Deleting the app does not cancel billing. Use Restore Purchases on the paywall or in Settings with the Apple account used for the original purchase. Refund requests are handled by Apple at <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>, subject to Apple's rules and applicable consumer rights.</p>
+<h2>Availability and contact</h2><p>Features and content may evolve. These terms do not limit mandatory consumer rights. The Apple Standard EULA governs warranties, liability and license matters. Questions: <a href="mailto:support@gentleflow.tech">support@gentleflow.tech</a>. See our <a href="../privacy/">Privacy Policy</a> for data handling.</p></div></section><section data-lang="zh"><h1>使用条款</h1><p class="sub">叽咕日语 · 2026 年 9 月 26 日生效</p><div class="card">
+<h2>使用本应用</h2><p>使用叽咕日语即表示同意本条款及 <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple 标准最终用户许可协议</a>。应用许可事项以 Apple 标准协议为准。应用供个人学习使用，不得违法传播应用或课程资源。课程仅用于教育，不保证特定语言水平或考试结果。</p>
+<h2>叽咕会员</h2><p>会员提供付费墙所列学习内容和功能。方案包括按月、按年自动续费订阅，以及一次性购买的终身会员。终身会员不自动续费。购买前会显示当地货币价格与计费周期，最终以 Apple 确认界面为准。</p>
+<h2>试用与续费</h2><p>符合条件的新订阅者可获得月度方案 3 天或年度方案 7 天免费试用。资格由 Apple 决定，曾订阅用户可能不符合条件。应用仅在确认资格后展示试用。试用结束后，除非已取消，所选方案按展示的价格续费。费用从 Apple 账号扣除。请至少在当前周期结束前 24 小时取消，否则订阅自动续费；续费扣款可能在到期前 24 小时内发生。适用时，购买订阅可能使未使用的试用期失效。</p>
+<h2>管理、恢复与退款</h2><p>可在 iOS 设置 → Apple 账号 → 订阅中管理或取消。删除应用不会取消订阅。使用原购买 Apple 账号，通过付费墙或设置中的“恢复购买”恢复权益。退款由 Apple 根据其规则及适用消费者权利处理，可前往 <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a> 申请。</p>
+<h2>服务与联系</h2><p>功能和内容可能更新。本条款不限制法律规定的消费者权利。许可、保证和责任事项适用 Apple 标准协议。问题请联系 <a href="mailto:support@gentleflow.tech">support@gentleflow.tech</a>。数据处理说明见<a href="../privacy/">隐私政策</a>。</p></div></section></div><footer class="site">
+  <span>© 2026 Gentleflow</span>
+  <a href="../../">Legal home</a>
+  <a href="../">Jigu support</a>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('[data-lang]').forEach(function(s){ s.classList.toggle('show', s.getAttribute('data-lang')===l); });
+  document.getElementById('btn-en').classList.toggle('active', l==='en');
+  document.getElementById('btn-zh').classList.toggle('active', l==='zh');
+  document.documentElement.lang = l==='zh' ? 'zh-Hans' : 'en';
+  try{ history.replaceState(null,'', l==='zh'?'#zh':'#en'); }catch(e){}
+}
+if (location.hash === '#zh' || (!location.hash && (navigator.language||'').toLowerCase().indexOf('zh')===0)) setLang('zh');
+</script>
+</body>
+</html>
