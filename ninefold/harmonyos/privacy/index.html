@@ -23,12 +23,14 @@
 
   <section data-lang="zh" class="show">
     <h1>隐私政策（HarmonyOS 版）</h1>
-    <p class="sub">九重数独 · 生效及更新日期：2026 年 9 月 19 日</p>
+    <p class="sub">九重数独 · 生效及更新日期：2026 年 9 月 26 日</p>
 
     <div class="tldr">
       <strong>摘要：</strong>九重数独 HarmonyOS 版是单机游戏，无需注册账号，不接入广告、分析或第三方追踪 SDK，
-      不向 Gentleflow 服务器上传个人信息。游戏进度和偏好仅保存在应用本机私有存储中。
+      游戏进度和偏好保存在应用本机私有存储中。
       自 1.8.0 起，主动打开“群星计划”后会向推荐服务发送本机随机标识及应用展示、点击信息，详见第 5 节。
+      自 1.8.4 起，炼狱排行榜为可选功能：只有你在排行榜页点击“加入”后，本应用才通过华为账号服务获取账号凭证，
+      并把由其派生的不可逆玩家编号及炼狱成绩上传至我们在华为 AppGallery Connect 上的云服务，详见第 3.1 节。
     </div>
 
     <div class="card">
@@ -44,7 +46,7 @@
       <a href="../../privacy/">独立隐私政策</a>。</p>
 
       <h2>3. 本应用如何处理数据</h2>
-      <p><strong>我们目前不通过本应用收集或向开发者服务器传输可识别你的个人信息。</strong>
+      <p><strong>除你主动加入的炼狱排行榜（见 3.1）外，本应用不收集或向开发者服务器传输可识别你的个人信息。</strong>
       本应用不要求姓名、手机号码、电子邮箱或其他注册资料，也不读取设备标识符、通讯录、相册、
       精确位置、剪贴板、相机或麦克风。</p>
       <p>当你购买会员时，交易由华为应用市场的应用内支付服务（IAP Kit）使用你在设备上已登录的华为账号完成。
@@ -60,11 +62,30 @@
       </ul>
       <p>上述功能数据通常不能单独识别你的身份，仅在应用的私有存储中使用，不会由本应用上传给我们。</p>
 
+      <h3>3.1 炼狱排行榜（可选）</h3>
+      <p><strong>触发条件：</strong>只有你在排行榜页点击“加入”后才会开始。不加入则不会发生下述任何处理，排行榜仍可浏览。</p>
+      <ul>
+        <li><strong>华为账号凭证：</strong>加入时及此后每次上传成绩前，本应用通过华为账号服务（Account Kit）获取设备上已登录华为账号的
+        登录凭证（ID Token，含华为为本应用生成的用户标识）。仅申请该标识，<strong>不获取昵称、头像、手机号或邮箱</strong>。
+        设备已登录华为账号时不会弹出界面；未登录时由系统显示华为账号登录页，你可以取消。</li>
+        <li><strong>上传与存储的内容：</strong>凭证交给我们的云函数验证真伪后，服务端用密钥把账号标识计算成一个
+        <strong>不可逆的玩家编号</strong>，只存储该编号；凭证本身和原始账号标识不存储。与玩家编号一起存储的有：
+        炼狱模式最佳分数、到达层数、最高连击、是否无失误、所属周次、更新时间、系统地区设置（两位国家/地区代码，
+        当前不在榜上显示）和榜上名字。</li>
+        <li><strong>榜上名字：</strong>由应用内置词库随机组合生成（如“沉默的渡鸦”），你只能随机更换，不能自行输入文字；
+        服务端只保存词库编号。</li>
+        <li><strong>公开范围：</strong>其他玩家在排行榜上可以看到你的名字（或四位随机代号）、名次、分数、层数和无失误标记，
+        看不到你的华为账号信息。</li>
+        <li><strong>目的：</strong>让同一个人在换机、重装后仍对应榜上同一行，并防止冒充和伪造成绩。</li>
+        <li><strong>本机保存：</strong>玩家编号、名字编号和本周已上传的最高分，用于标出你自己的那一行和避免重复上传。</li>
+      </ul>
+
       <h2>4. 设备权限与系统能力</h2>
       <ul>
         <li><strong>振动权限（ohos.permission.VIBRATE）：</strong>用于按你的设置提供按键和游戏结果触感反馈。你可在应用“设置”中关闭振动。</li>
         <li><strong>网络权限（ohos.permission.INTERNET）：</strong>用于华为应用内支付（IAP Kit）查询商品与价格、
-        发起支付、校验购买凭据和管理订阅；也用于在你主动打开群星计划后获取推荐、图标和详情，并上报展示与点击。本应用不会通过网络向开发者服务器上传你的游戏数据或个人信息。
+        发起支付、校验购买凭据和管理订阅；也用于在你主动打开群星计划后获取推荐、图标和详情，并上报展示与点击；
+        以及读取排行榜，并在你加入排行榜后上传第 3.1 节所述数据。除此之外，本应用不会通过网络向开发者服务器上传你的游戏数据或个人信息。
         点击隐私政策、用户协议或联系我们时，本应用会请求 HarmonyOS 交由系统浏览器或邮件应用打开相应地址；
         后续网络访问由你选择的系统应用完成。</li>
       </ul>
@@ -81,6 +102,9 @@
       网络连接会使服务方接收到 IP 地址等必要连接信息。服务方按其自身规则处理收到的数据。
       不发送游戏进度、购买记录、设备标识符或华为账号，不做个性化广告或跨应用追踪。
       本应用未集成群星计划 SDK，未展示横幅或插屏广告。点击下载后由系统打开应用市场或目标网站。</p>
+      <p><strong>华为账号服务（Account Kit）与 AppGallery Connect 云服务：</strong>炼狱排行榜使用华为账号服务获取第 3.1 节所述登录凭证，
+      并使用华为 AppGallery Connect 提供的云函数和云数据库（由华为软件技术有限公司提供，数据处理位置为中国）存储排行榜数据。
+      该云服务由我们作为开发者使用，排行榜数据由我们控制；华为作为服务提供方依据其服务协议处理。</p>
       <p>本应用集成华为应用内支付服务（IAP Kit，由华为软件技术有限公司提供），用于会员订阅、一次性购买、
       恢复购买与订阅管理。调用时会向华为传输完成交易所必需的信息（如商品标识、订单与购买凭据，以及你已登录的华为账号），
       具体处理规则适用华为的隐私声明。除此之外，本应用不集成广告 SDK、统计分析 SDK、崩溃上报 SDK
@@ -95,6 +119,9 @@
       若你在系统中启用了应用备份，系统可能按照你的备份设置备份和恢复本应用数据；我们无法读取该系统备份。</p>
       <p>本机数据保留至你在应用内重置相应进度、清除应用数据或卸载应用。系统备份副本的保存期限由你的华为账号、
       设备设置及相应系统服务规则决定，你可通过系统提供的备份管理功能处理。</p>
+      <p>排行榜数据存储在华为 AppGallery Connect 云数据库（中国），仅能通过我们的云函数写入，传输全程加密。
+      周榜记录在约 8 周后自动删除；总榜记录和名字在排行榜运营期间保留，你可随时按第 7 节请求删除；
+      排行榜停止运营时，我们将删除全部排行榜数据。</p>
 
       <h2>7. 你的选择与权利</h2>
       <ul>
@@ -102,8 +129,10 @@
         <li>在“设置 › 数据 › 重置进度”删除关卡进度、统计、脑力档案及地狱模式记录。</li>
         <li>在“设置 › 数据 › 撤回隐私同意”撤回同意；应用会退出，下次启动时再次征求你的选择。撤回不影响此前处理的合法性，也不会自动删除本机游戏数据。</li>
         <li>通过系统清除应用数据或卸载本应用，删除应用私有目录中的全部本机数据。</li>
-        <li>通过上方邮箱提出查阅、复制、更正、删除、解释说明或投诉请求。由于本应用不向我们上传数据，
-        我们通常没有可按你的身份检索的服务器端记录，但会说明核查结果并协助你使用本机或系统功能。</li>
+        <li>排行榜：不点击“加入”即不参与。已加入的，清除应用数据或卸载后本应用不再上传，直到你再次点击“加入”。
+        如需删除已上传的排行榜记录，请发邮件并附上你在榜上显示的名字，我们核实后删除该玩家编号的全部记录和名字。</li>
+        <li>通过上方邮箱提出查阅、复制、更正、删除、解释说明或投诉请求。除排行榜数据外，本应用不向我们上传数据，
+        我们通常没有可按你的身份检索的其他服务器端记录，但会说明核查结果并协助你使用本机或系统功能。</li>
       </ul>
 
       <h2>8. 未成年人保护</h2>
@@ -111,7 +140,8 @@
       指导下阅读本政策和使用本应用；如未来功能需要处理儿童个人信息，我们会在处理前另行告知并依法取得监护人同意。</p>
 
       <h2>9. 数据出境</h2>
-      <p>本应用不将个人信息上传至 Gentleflow 服务器。群星计划收到的数据及其处理规则见第 5 节；我们不对第三方服务的存储地点作未经核实的承诺。
+      <p>排行榜数据存储于华为 AppGallery Connect 的中国数据处理位置，不向境外提供。群星计划收到的数据及其处理规则见第 5 节；
+      我们不对第三方服务的存储地点作未经核实的承诺。
       通过系统浏览器访问本页面时，GitHub Pages 可能依据其服务规则处理网络连接所必需的信息；
       该访问发生在系统浏览器中，你也可以在首次同意后离线使用主要游戏功能。</p>
 
@@ -129,13 +159,15 @@
 
   <section data-lang="en">
     <h1>Privacy Policy (HarmonyOS)</h1>
-    <p class="sub">Ninefold Sudoku · Effective and last updated September 19, 2026</p>
+    <p class="sub">Ninefold Sudoku · Effective and last updated September 26, 2026</p>
 
     <div class="tldr">
       <strong>Summary:</strong> The HarmonyOS edition is an offline game. It requires no account,
-      includes no advertising, analytics, or third-party tracking SDK, and uploads no personal
-      information to a Gentleflow server. Progress and preferences remain in the App's private
+      and includes no advertising, analytics, or third-party tracking SDK. Progress and preferences remain in the App's private
       on-device storage. From version 1.8.0, opening AppUnions sends a locally generated random identifier and app impression/click information to the recommendation service, as described in section 5.
+      From version 1.8.4, the Hell leaderboard is optional: only after you tap “Join” on the leaderboard page does the App obtain a
+      HUAWEI ID credential and upload an irreversible player number derived from it, together with your Hell scores, to our cloud
+      service on Huawei AppGallery Connect, as described in section 3.1.
     </div>
 
     <div class="card">
@@ -152,8 +184,8 @@
       <a href="../../privacy/">separate policy</a>.</p>
 
       <h2>3. Data handled by the App</h2>
-      <p><strong>The App does not currently collect identifiable personal information or transmit
-      it to a developer server.</strong> No name, phone number, email, device identifier, contacts,
+      <p><strong>Apart from the leaderboard you choose to join (section 3.1), the App does not collect identifiable
+      personal information or transmit it to a developer server.</strong> No name, phone number, email, device identifier, contacts,
       photos, precise location, clipboard, camera, or microphone data is requested.</p>
       <p>When you buy Premium, the transaction is completed by AppGallery in-app purchase (IAP Kit)
       using the HUAWEI ID already signed in on your device. Huawei processes the account, order, and
@@ -165,14 +197,36 @@
       restore play, apply your settings, and remember your privacy choice. It remains in the App's
       private on-device storage and is not uploaded by the App.</p>
 
+      <h3>3.1 Hell leaderboard (optional)</h3>
+      <p><strong>When:</strong> only after you tap “Join” on the leaderboard page. If you don't join, none of the following happens;
+      you can still browse the board.</p>
+      <ul>
+        <li><strong>HUAWEI ID credential:</strong> when you join and before each score upload, the App uses HUAWEI Account Kit to obtain
+        a sign-in credential (ID token containing the user identifier Huawei issues for this App) for the HUAWEI ID signed in on the device.
+        Only that identifier is requested — <strong>no nickname, avatar, phone number, or email</strong>. No screen appears if a HUAWEI ID is
+        signed in; otherwise the system shows the HUAWEI ID sign-in page, which you can cancel.</li>
+        <li><strong>What is uploaded and stored:</strong> our cloud function verifies the credential, then derives an
+        <strong>irreversible player number</strong> from the account identifier with a secret key and stores only that number; the credential
+        and the raw identifier are not stored. Stored with it: best Hell score, floor reached, best combo, flawless flag, week, update time,
+        your system region setting (two-letter code, not currently shown), and your board name.</li>
+        <li><strong>Board name:</strong> generated from the App's built-in word list (e.g. “Silent Raven”). You can reshuffle it but cannot
+        type text; the server stores only word-list indices.</li>
+        <li><strong>Visibility:</strong> other players see your name (or a four-character code), rank, score, floor, and flawless mark —
+        never your HUAWEI ID details.</li>
+        <li><strong>Purpose:</strong> keep you on the same row across devices and reinstalls, and prevent impersonation and forged scores.</li>
+        <li><strong>Stored on device:</strong> your player number, name indices, and this week's uploaded best, used to mark your own row and
+        avoid duplicate uploads.</li>
+      </ul>
+
       <h2>4. Permission and system capabilities</h2>
       <ul>
         <li><strong>Vibration:</strong> <code>ohos.permission.VIBRATE</code> provides haptic feedback
         according to your in-App setting.</li>
         <li><strong>Network:</strong> <code>ohos.permission.INTERNET</code> is used by AppGallery
         in-app purchase (IAP Kit) to load products and prices, start payment, verify purchases, and
-        manage subscriptions. It also loads AppUnions recommendations, icons and details and reports impressions and clicks after you open the feature. The App uploads no game data or personal information to a developer
-        server. Legal and contact links are handed to your system browser or mail app, which handles
+        manage subscriptions. It also loads AppUnions recommendations, icons and details and reports impressions and clicks after you open the feature,
+        and reads the leaderboard and, after you join, uploads the data described in section 3.1. Otherwise the App uploads no game data or
+        personal information to a developer server. Legal and contact links are handed to your system browser or mail app, which handles
         any later connection.</li>
       </ul>
 
@@ -188,6 +242,10 @@
       No game progress, purchase records, device identifier, or HUAWEI ID is sent. There is no personalized advertising or cross-app tracking.
       No AppUnions SDK, banner, or interstitial is integrated. Download buttons open the system store or destination website.
       You can avoid this feature's transmissions by not opening it.</p>
+      <p><strong>HUAWEI Account Kit and AppGallery Connect cloud services:</strong> the Hell leaderboard uses Account Kit to obtain the
+      credential in section 3.1, and stores leaderboard data with AppGallery Connect Cloud Functions and Cloud DB (provided by Huawei,
+      data processing location: China). We use these services as the developer and control the leaderboard data; Huawei processes it
+      as the service provider under its service terms.</p>
       <p>The App integrates AppGallery in-app purchase (IAP Kit, provided by Huawei) for Premium
       subscriptions, one-time purchase, restore, and subscription management. Using it transmits the
       information required to complete a transaction, such as product identifiers, orders, purchase
@@ -204,6 +262,9 @@
       backup is enabled, HarmonyOS may back up and restore this data under your system settings; we
       cannot read that backup. Local data remains until you reset it, clear App data, or uninstall
       the App. System backup retention is controlled through your device and Huawei services.</p>
+      <p>Leaderboard data is stored in AppGallery Connect Cloud DB (China), can be written only through our cloud function, and is
+      encrypted in transit. Weekly rows are deleted automatically after about 8 weeks; all-time rows and names are kept while the
+      leaderboard operates and can be deleted on request (section 7). If the leaderboard is discontinued, we delete all its data.</p>
 
       <h2>7. Your choices</h2>
       <ul>
@@ -212,8 +273,11 @@
         <li>Use Settings › Data › Withdraw privacy consent. The App closes and asks again at the
         next launch; withdrawal does not automatically delete local game data.</li>
         <li>Clear App data or uninstall to remove the App's private on-device data.</li>
-        <li>Email us to request access, correction, deletion, explanation, or to complain. Because
-        no data is uploaded, we normally hold no server record that can be retrieved by identity.</li>
+        <li>Leaderboard: not tapping “Join” means not participating. After joining, clearing App data or uninstalling stops uploads until
+        you tap “Join” again. To delete uploaded leaderboard records, email us with the name shown for you on the board; after verification
+        we delete all records and the name for that player number.</li>
+        <li>Email us to request access, correction, deletion, explanation, or to complain. Apart from leaderboard data, nothing is
+        uploaded, so we normally hold no other server record that can be retrieved by identity.</li>
       </ul>
 
       <h2>8. Children</h2>
@@ -222,7 +286,7 @@
       obtain legally required guardian consent before any future processing of children's data.</p>
 
       <h2>9. International transfers</h2>
-      <p>The App initiates no transfer of personal information to a Gentleflow server. If you open
+      <p>Leaderboard data is stored in AppGallery Connect's China data processing location and is not transferred abroad. If you open
       this page in a browser, GitHub Pages may process connection data under its own terms. The
       principal game can be used offline after the first consent.</p>
 
