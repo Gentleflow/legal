@@ -19,6 +19,13 @@ Arvia iOS documents:
 - Privacy: `/arvia/privacy/`
 - Terms: `/arvia/terms/`
 
+Jigu (叽咕日语) HarmonyOS documents (Chinese only; iOS pages stay at `/jigu/privacy/` and `/jigu/terms/`):
+
+- Terms: `/jigu/harmonyos/terms/`
+- Membership: `/jigu/harmonyos/membership/`
+- Auto-renewal: `/jigu/harmonyos/auto-renewal/`
+- Privacy: `/jigu/harmonyos/privacy/`
+
 Ninefold platform-specific documents:
 
 - HarmonyOS privacy: `/ninefold/harmonyos/privacy/`
