@@ -101,3 +101,12 @@ to the custom domain.
 ## Contact
 
 gentleflowoverseas@gmail.com
+
+## Tribbit HarmonyOS · 单词消消乐
+
+仅简体中文；应用内首启选择与本机同意，自定义协议链接，生效日期 2026-11-03。
+
+- 隐私政策 — https://gentleflow.github.io/legal/tribbit/harmonyos/privacy/
+- 用户协议 — https://gentleflow.github.io/legal/tribbit/harmonyos/terms/
+- 会员服务协议 — https://gentleflow.github.io/legal/tribbit/harmonyos/membership/
+- 自动续费服务协议 — https://gentleflow.github.io/legal/tribbit/harmonyos/auto-renewal/
