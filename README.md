@@ -102,7 +102,7 @@ to the custom domain.
 
 gentleflowoverseas@gmail.com
 
-## Tribbit HarmonyOS · 单词消消乐
+## Tribbit HarmonyOS · 消了个词
 
 仅简体中文；应用内首启选择与本机同意，自定义协议链接，生效日期 2026-11-03。
 
